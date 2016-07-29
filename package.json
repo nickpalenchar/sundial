@@ -1,10 +1,10 @@
 {
   "name": "sundial-js",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "compare dates in a not-too-painful way",
   "main": "sundial.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test test"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,9 @@
     "dates"
   ],
   "author": "Nick Palenchar",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
 }
