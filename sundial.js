@@ -25,6 +25,14 @@ var Sd = function (date) {
   return sdDate
 
 }
+Sd.convertSd = function (sd) {
+  if(sd.sdDate) sd = sd.sdDate;
+  return new Date(sd * 86400000);
+}
+
+
+
+
 try {
   if (window) {
     window.Sd = Sd

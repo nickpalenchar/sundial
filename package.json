@@ -1,8 +1,8 @@
 {
   "name": "sundial-js",
-  "version": "0.0.22",
+  "version": "0.0.31",
   "description": "compare dates in a not-too-painful way",
-  "main": "sundial.min.js",
+  "main": "sundial.js",
   "scripts": {
     "test": "mocha test test"
   },

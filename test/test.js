@@ -1,3 +1,5 @@
+'use strict'
+
 var expect = require("expect.js");
 var Sd = require("../sundial");
 
@@ -19,5 +21,17 @@ describe("Sd invocation", function () {
 describe("Manual date setting ", function () {
   it("should return the current day if no argument is given",function () {
     expect(Sd()).to.be.greaterThan(16597); //sundail of July 28 2016
+  })
+});
+
+describe("Sd.convertSd", function () {
+  it("should convertSd numbers to dates", function () {
+    expect(Sd.convertSd(0)).to.be.a(Date);
+    expect(Sd.convertSd(150000000)).to.be.a(Date);
+    let randomNum = Math.round(Math.random() * 1000002000000);
+    expect(Sd.convertSd(randomNum)).to.be.a(Date);
+  });
+  it("correctly convertSds the number to a date", function () {
+    // test here
   })
 });
