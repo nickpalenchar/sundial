@@ -50,7 +50,24 @@ else {
 
 ```
 
-If you need more sophicated info, with access to an actual Date object, call `new Sd()` on a variable.
+
+## Main Sd function
+
+Assign sundial numbers to our variable with the following syntax:
+```
+Sd();
+```
+Or set the number of days based off a predifined time (same syntax as the [Date object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date))
+```
+Sd(value);
+Sd(dateString);
+Sd(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
+```
+
+Returns a number (sundial number) representing the days since Jan 1, 1970, _including_ that date.
+
+If you need more sophistocated informaton, invoke with  `new`
+
 ```
 var allTheInfo = new Sd();
 ```
@@ -60,6 +77,20 @@ This gives you an object with the following properties:
 + *jsDate* - The first-class JavaScript Date
 + *sdDate* - A sundial date. This is the Number primitive that gets returned with `Sd()`
 + *daysThisYear* - days passed in the current year. Useful if you don't care about the year and only want to compare only 3 digits
+
+
+## Methods
+
+New in v0.0.3x, use `Sd.convertSd` to get the inverse function, converting your sundial object/numbers back to native Date objects.
+
+```
+Sd.convertSd(1) // -> Jan 1 1970 (Date)
+
+//Sd() and Sd.convertSd() are true inverses, so invoking one within the other cancels each other out
+
+Sd(Sd.convertSd(x)) // -> x
+Sd.convertSd(Sd(x)) // -> x
+```
 
 ## Anything else?
 
