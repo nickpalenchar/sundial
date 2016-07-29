@@ -33,12 +33,18 @@ console.log(howManyDays) // -> 16241
 var lastLoggedIn = functionThatReturnsAnEarlierSundial();
 var newLoginDay = Sd();
 
-if(lastLoggedIn !== newLoginDay){
-  alert("Glad to see you today!");
+if(lastLoggedIn === newLoginDay){
+  // user has logged in before
+  alert("You've already logged in today!");
+}
+else if(newLoginDay - lastLogged === 1){
+  // user has logged in consecutively
+  alert("Welcome back!");
   streak++;
-} else {
-  var daysSinceLastLogin = newLoginDay - lastLoggedIn;
-  alert("It's been " + daysSinceLastLogin + " days since we've seen you last");
+}
+else {
+  // user has not logged in for a while
+  alert("You've broken your login streak, but we're glad you're back!);
   streak = 1;
 }
 
