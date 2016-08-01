@@ -1,4 +1,5 @@
-# Sundial.js - compare dates in a not-too-painful way
+# Sundial.js [![npm](https://img.shields.io/npm/dm/sundial-js.svg?maxAge=2592000)]() [![npm](https://img.shields.io/npm/v/sundial-js.svg?maxAge=2592000)]() [![npm](https://img.shields.io/npm/l/sundial-js.svg?maxAge=2592000)]()
+_compare dates in a not-too-painful way_
 
 Most of the time when comparing dates, you don't need to think in units as small as milliseconds.
 
