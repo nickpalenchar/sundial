@@ -1,6 +1,8 @@
 # Sundial.js [![npm](https://img.shields.io/npm/dm/sundial-js.svg?maxAge=2592000)]() [![npm](https://img.shields.io/npm/v/sundial-js.svg?maxAge=2592000)]() [![npm](https://img.shields.io/npm/l/sundial-js.svg?maxAge=2592000)]()
 _compare dates in a not-too-painful way_
 
+### <span style="color: red">v0.1.x has been released with major algorithmic changes to ensure accuracy of sundail Dates. If you are on v0.0.x, please upgrade now.</span>
+
 Most of the time when comparing dates, you don't need to think in units as small as milliseconds.
 
 Oftentimes, you only need to know about days.
