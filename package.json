@@ -1,6 +1,6 @@
 {
   "name": "sundial-js",
-  "version": "0.0.31",
+  "version": "0.0.33",
   "description": "compare dates in a not-too-painful way",
   "main": "sundial.js",
   "scripts": {

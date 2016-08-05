@@ -1,7 +1,7 @@
 function _SdGetDaysInCurrentYear(years, dateModel) {
   var febDays = years % 4 === 0 ? 29 : 28
   var dictionary = [31, febDays, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  var curMonth = dateModel.getMonth()
+  var curMonth = dateModel.getMonth() + 1;
   var daysInFullMonths = dictionary.slice(0, curMonth).reduce(function (a, b) {
     return a + b
   }, 0)
@@ -9,10 +9,11 @@ function _SdGetDaysInCurrentYear(years, dateModel) {
 }
 
 var Sd = function (date) {
+  debugger;
 
   var dateModel = date ? new Date(date) : new Date()
-  var years = dateModel.getFullYear() - 1970;
-  var yearsInDays = years * 356 + (Math.floor((years - 2) / 4))
+  var years = dateModel.getFullYear() - 1969;
+  var yearsInDays = years * 356 + (Math.floor((years - 3) / 4))
 
   var daysThisYear = _SdGetDaysInCurrentYear(years, dateModel)
 
