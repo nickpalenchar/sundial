@@ -12,18 +12,19 @@ var Sd = function (date) {
   debugger;
 
   var dateModel = date ? new Date(date) : new Date()
-  var years = dateModel.getFullYear() - 1969;
-  var yearsInDays = years * 356 + (Math.floor((years - 3) / 4))
 
-  var daysThisYear = _SdGetDaysInCurrentYear(years, dateModel)
+  var msOffset = dateModel.getTimezoneOffset() * 60000;
 
-  var sdDate = daysThisYear + yearsInDays
+  var parsedDate = Date.parse(dateModel);
+  var sdDate = Math.floor((parsedDate - msOffset) / 86400000) + 1;
+
+  var daysThisYear = _SdGetDaysInCurrentYear((dateModel.getFullYear() - 1969), dateModel)
 
   this.jsDate = dateModel
   this.sdDate = sdDate
   this.daysThisyear = daysThisYear
 
-  return sdDate
+  return sdDate;
 
 }
 Sd.convertSd = function (sd) {
